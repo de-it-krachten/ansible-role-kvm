@@ -1,0 +1,50 @@
+---
+
+- name: Install kvm packages (required)
+  ansible.builtin.package:
+    name: "{{ kvm_packages }}"
+    state: present
+
+- name: Install kvm packages (optional)
+  ansible.builtin.package:
+    name: "{{ kvm_packages_optional }}"
+    state: present
+  when: kvm_full | bool
+
+- name: Install kvm packages (desktop)
+  ansible.builtin.package:
+    name: "{{ kvm_packages_desktop }}"
+    state: present
+  when: kvm_desktop | bool
+
+- name: Identify processor family
+  ansible.builtin.set_fact:
+    kvm_processor: >-
+      {%- if 'GenuineIntel' in ansible_processor -%}
+      intel
+      {%- elif 'AuthenticAMD' in ansible_processor -%}
+      amd
+      {%- endif -%}
+
+- name: Load kernel modules
+  community.general.modprobe:
+    name: "{{ item }}"
+    state: present
+    params: "nested={{ kvm_nested }}"
+  loop:
+    - kvm
+    - kvm_{{ kvm_processor }}
+
+- name: Load kernel modules at boot
+  ansible.builtin.lineinfile:
+    path: /etc/modprobe.d/kvm.conf
+    state: present
+    line: "options kvm_{{ kvm_processor }} nested={{ '1' if kvm_nested | bool else '0' }}"
+    mode: "0644"
+    create: yes
+
+- name: Enable kvm
+  ansible.builtin.service:
+    name: "{{ kvm_service }}"
+    enabled: true
+    state: started

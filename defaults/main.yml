@@ -1,0 +1,13 @@
+---
+
+# Name of the libvirt daemon
+kvm_service: libvirtd
+
+# Allow nested virtulization
+kvm_nested: false
+
+# Should be install the full set of KVM features
+kvm_full: false
+
+# Should the desktop packages be installed
+kvm_desktop: false

@@ -1,0 +1,14 @@
+---
+
+# Generic
+generic:
+  role: ansible-role-kvm
+  role_short: kvm
+  role_description: |
+    Installs KVM with libvirt
+  collections: []
+
+molecule:
+  provider: libvirt
+  requirements:
+    roles_extra: []
