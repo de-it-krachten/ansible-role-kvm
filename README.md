@@ -54,6 +54,12 @@ kvm_full: false
 
 # Should the desktop packages be installed
 kvm_desktop: false
+
+# KVM group
+kvm_group: kvm
+
+# List of KVM users that should be member of `kvm`
+kvm_users: []
 </pre></code>
 
 ### defaults/family-Debian.yml

@@ -1,0 +1,8 @@
+---
+
+- name: Add users to group '{{ kvm_group }}'
+  ansible.builtin.user:
+    name: "{{ item }}"
+    append: yes
+    groups: "{{ kvm_group }}"
+  loop: "{{ kvm_users }}" 
