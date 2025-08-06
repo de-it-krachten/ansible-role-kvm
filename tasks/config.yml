@@ -5,4 +5,4 @@
     name: "{{ item }}"
     append: yes
     groups: "{{ kvm_group }}"
-  loop: "{{ kvm_users }}" 
+  loop: "{{ kvm_users }}"
