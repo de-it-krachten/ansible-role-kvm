@@ -8,6 +8,15 @@ generic:
     Installs KVM with libvirt
   collections: []
 
+# Supported platforms
+platforms:
+  opensuse15:
+    ci: false
+    supported: false
+  sles15:
+    ci: false
+    supported: false
+
 molecule:
   provider: libvirt
   requirements:

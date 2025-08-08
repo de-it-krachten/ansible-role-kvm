@@ -1,12 +1,12 @@
 ---
 
 kvm_packages:
-  - qemu
+  - kmod
   - qemu-kvm
   - libvirt-clients
   - libvirt-daemon-system
-  - virtinst
   - bridge-utils
+  - virtinst
 
 kvm_packages_optional: []
 ##  - libvirt-devel

@@ -31,8 +31,6 @@ Supported platforms
 - AlmaLinux 8
 - AlmaLinux 9
 - AlmaLinux 10
-- SUSE Linux Enterprise 15<sup>1</sup>
-- openSUSE Leap 15
 - Debian 11 (Bullseye)
 - Debian 12 (Bookworm)
 - Debian 13 (Trixie)
@@ -70,12 +68,12 @@ kvm_users: []
 ### defaults/family-Debian.yml
 <pre><code>
 kvm_packages:
-  - qemu
+  - kmod
   - qemu-kvm
   - libvirt-clients
   - libvirt-daemon-system
-  - virtinst
   - bridge-utils
+  - virtinst
 
 kvm_packages_optional: []
 ##  - libvirt-devel
