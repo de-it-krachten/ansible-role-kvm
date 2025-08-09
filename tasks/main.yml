@@ -1,0 +1,10 @@
+---
+
+- name: Including 'vars.yml'
+  ansible.builtin.include_tasks: vars.yml
+
+- name: Including 'install.yml'
+  ansible.builtin.include_tasks: install.yml
+
+- name: Including 'config.yml'
+  ansible.builtin.include_tasks: config.yml

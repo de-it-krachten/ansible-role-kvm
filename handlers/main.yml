@@ -1,0 +1,6 @@
+---
+
+- name: Restart kvm
+  ansible.builtin.service:
+    name: "{{ kvm_service }}"
+    state: restarted

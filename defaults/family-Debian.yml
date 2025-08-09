@@ -1,0 +1,18 @@
+---
+
+kvm_packages:
+  - kmod
+  - qemu-kvm
+  - libvirt-clients
+  - libvirt-daemon-system
+  - bridge-utils
+  - virtinst
+
+kvm_packages_optional: []
+##  - libvirt-devel
+#  - virt-top
+#  - libguestfs-tools
+#  - guestfs-tools
+
+kvm_packages_desktop:
+  - virt-manager
