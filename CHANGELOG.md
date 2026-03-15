@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/de-it-krachten/ansible-role-kvm/compare/v1.0.0...v1.1.0) (2026-03-15)
+
+
+### Features
+
+* Added support for Fedora 43 ([872f4c8](https://github.com/de-it-krachten/ansible-role-kvm/commit/872f4c80f01e045f7e32a7ce7d07c0447358eabf))
+* Drop support for Fedora 41 ([b2bf627](https://github.com/de-it-krachten/ansible-role-kvm/commit/b2bf6277a528b34f29cb32e39fa761fc9a917cf5))
+
 # 1.0.0 (2025-08-09)
 
 
