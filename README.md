@@ -31,7 +31,6 @@ Supported platforms
 - AlmaLinux 8
 - AlmaLinux 9
 - AlmaLinux 10
-- Debian 11 (Bullseye)
 - Debian 12 (Bookworm)
 - Debian 13 (Trixie)
 - Ubuntu 20.04 LTS
@@ -100,6 +99,26 @@ kvm_packages_optional:
   - virt-top
   - libguestfs-tools
   - guestfs-tools
+
+kvm_packages_desktop:
+  - virt-manager
+</pre></code>
+
+### defaults/Ubuntu-26.yml
+<pre><code>
+kvm_packages:
+  - kmod
+  - qemu-system-x86
+  - libvirt-clients
+  - libvirt-daemon-system
+  - bridge-utils
+  - virtinst
+
+kvm_packages_optional: []
+##  - libvirt-devel
+#  - virt-top
+#  - libguestfs-tools
+#  - guestfs-tools
 
 kvm_packages_desktop:
   - virt-manager
