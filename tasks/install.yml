@@ -20,9 +20,9 @@
 - name: Identify processor family  # noqa jinja[spacing]
   ansible.builtin.set_fact:
     kvm_processor: >-
-      {%- if 'GenuineIntel' in ansible_processor -%}
+      {%- if 'GenuineIntel' in ansible_facts.processor -%}
       intel
-      {%- elif 'AuthenticAMD' in ansible_processor -%}
+      {%- elif 'AuthenticAMD' in ansible_facts.processor -%}
       amd
       {%- endif -%}
 
