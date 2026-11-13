@@ -31,14 +31,14 @@ Supported platforms
 - AlmaLinux 8
 - AlmaLinux 9
 - AlmaLinux 10
-- Debian 11 (Bullseye)
 - Debian 12 (Bookworm)
 - Debian 13 (Trixie)
 - Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
 - Ubuntu 24.04 LTS
-- Fedora 42
+- Ubuntu 26.04 LTS
 - Fedora 43
+- Fedora 44<sup>1</sup>
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
@@ -99,6 +99,26 @@ kvm_packages_optional:
   - virt-top
   - libguestfs-tools
   - guestfs-tools
+
+kvm_packages_desktop:
+  - virt-manager
+</pre></code>
+
+### defaults/Ubuntu-26.yml
+<pre><code>
+kvm_packages:
+  - kmod
+  - qemu-system-x86
+  - libvirt-clients
+  - libvirt-daemon-system
+  - bridge-utils
+  - virtinst
+
+kvm_packages_optional: []
+##  - libvirt-devel
+#  - virt-top
+#  - libguestfs-tools
+#  - guestfs-tools
 
 kvm_packages_desktop:
   - virt-manager
