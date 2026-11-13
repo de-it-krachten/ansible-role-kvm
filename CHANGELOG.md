@@ -1,3 +1,19 @@
+# [1.2.0](https://github.com/de-it-krachten/ansible-role-kvm/compare/v1.1.0...v1.2.0) (2026-11-13)
+
+
+### Bug Fixes
+
+* Fix deprecation warnings ([82cb0f0](https://github.com/de-it-krachten/ansible-role-kvm/commit/82cb0f0e46e25516b4e484d3d5bcafbdf868e379))
+* Standarize vars.yml ([e24bc0b](https://github.com/de-it-krachten/ansible-role-kvm/commit/e24bc0bb229048c10791f839897166dc6f8abfcb))
+
+
+### Features
+
+* Added support for Fedora 44 ([dd2f3c1](https://github.com/de-it-krachten/ansible-role-kvm/commit/dd2f3c177ae02c22ac3a41d6c2d0777b03d4935e))
+* Added support for Ubuntu 26.04 LTS ([e03664d](https://github.com/de-it-krachten/ansible-role-kvm/commit/e03664d200b307d7003489a6c35f967a7cc1e801))
+* Drop support for Debian 11 (Bullseye) ([7d1085f](https://github.com/de-it-krachten/ansible-role-kvm/commit/7d1085f757c0e9a080a287a3dbee791b519874fe))
+* Drop support for Fedora 42 ([17ee431](https://github.com/de-it-krachten/ansible-role-kvm/commit/17ee43173d5b5b290e80ef605c3e13c778a8ccd7))
+
 # [1.1.0](https://github.com/de-it-krachten/ansible-role-kvm/compare/v1.0.0...v1.1.0) (2026-03-15)
 
 
